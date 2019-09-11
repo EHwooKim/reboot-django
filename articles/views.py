@@ -15,8 +15,8 @@ def new(request):
 
 def create(request):
     article = Article()
-    article.title = request.GET.get('title')
-    article.content = request.GET.get('content')
+    article.title = request.POST.get('title')
+    article.content = request.POST.get('content')
     article.save()
     return redirect('/articles/')
 

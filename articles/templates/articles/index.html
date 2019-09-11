@@ -5,21 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    aside {
+      width: 240px;
+      height: 100%;
+      float: left;
+      padding-top: 120px;
+    }
+    aside>div>div {
+      display: inline-block;
+      border: solid black 1px;
+      border-radius: 30%;
+    }
+    .container {
+      margin: 0 240px;
+    }
+  </style>
 </head>
 <body>
-  <h1> 게시판 </h1>
-  <table>
-    <tr>
-      <th>제목</th>
-      <th>작성시간</th>
-    </tr>
-    {% for article in articles %}
-    <tr>
-      <td><a href="{{article.pk}}/" style='text-decoration: none; color: black'><p>{{article.title}}</p></a></td>
-      <td><p>{{article.created_at}}</p></td>
-    </tr>
-    {% endfor %}
-  </table>
-  <a href="/articles/new"><button>글쓰기</button></a>
+  <aside>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 12px;">
+      <img src="https://emoji.slack-edge.com/TL229FZ5F/hsb2/9a554298cdbfd9c0.jpg" alt="순범" >
+      <div style="margin-left: 4px"><p>어서오시든가</p></div>
+    </div>
+
+  </aside>
+  <div class="container">
+    <h1> 게시판 </h1><hr>
+    <table>
+      <tr>
+        <th>제목</th>
+        <th>작성시간</th>
+      </tr>
+      {% for article in articles %}
+      <tr>
+        <td><a href="{{article.pk}}/" style='text-decoration: none; color: black'><p>{{article.title}}</p></a></td>
+        <td><p>{{article.created_at}}</p></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="/articles/new"><button>글쓰기</button></a>
+  </div>
 </body>
 </html>

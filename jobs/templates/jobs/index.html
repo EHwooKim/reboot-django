@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>너의 전생은?</title>
+</head>
+<body>
+  <img src="http://res.heraldm.com/phpwas/restmb_allidxmake.php?idx=5&simg=201503310958034689481_20150331111918_01.jpg" alt="레드썬">
+  <div style="margin-top: 24px">
+    <form action="{% url 'jobs:pastlife' %}" method="POST">
+      {%csrf_token%}
+      이름이 무엇이냐 <input type="text" name='name'>
+      <input type="submit" value="레드썬!!">
+    </form>
+  </div>
+</body>
+</html>

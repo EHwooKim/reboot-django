@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>당신은 전생에</title>
+</head>
+<body>
+  <h1>{{job.name}}!! 당신은 전생에 {{job.my_job}}이었습니다.</h1>
+  <a href="https://search.naver.com/search.naver?where=image&query={{job.my_job}}">이 직업이 뭔데</a><hr>
+  <img src="{{image_url}}" alt="{{job.my_job}}"><br>
+  <a href="{% url 'jobs:index'%}"><button>돌아가기</button> </a>
+</body>
+</html>
