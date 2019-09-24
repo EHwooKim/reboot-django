@@ -8,12 +8,15 @@
 </head>
 <body>
   <h1> 글작성하는 페이지</h1>
-  <form action="/articles/create/" method="POST">
+  <!-- GET으로 요청을 받으면 url주소가 바뀌는데 파일을 저장하는 경우는 url에 파일을 담을 수 없으니 POST일 때만 파일 저장 기능을 사용할 수 있다. -->
+  <form action="/articles/create/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <label for="title">제목 : </label><br>
     <input type="text" name="title" > <br>
     <label for="content">내용 : </label><br>
     <textarea name="content" id="content" cols="30" rows="10"></textarea><br>
+    <label for="content">이미지 : </label><br>
+    <input type="file" name="image" id="image">
     <input type="submit" value="작성">
     <a href="/articles/"><button>취소</button></a>
   </form>
