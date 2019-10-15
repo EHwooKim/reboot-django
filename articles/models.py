@@ -11,7 +11,9 @@ class Article(models.Model):
     title = models.CharField(max_length=30)
     content = models.TextField()
     image = models.ImageField()
+    # auto_now_add : 더해지는 그 순간... create되는 순간에만!
     created_at = models.DateTimeField(auto_now_add=True)
+    # auto_now : 변경될 때 항상 찍어주는거!
     updated_at = models.DateTimeField(auto_now=True)
     # reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
 
