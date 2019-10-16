@@ -127,7 +127,8 @@ or
    
       ```sql
    -- sql
-   
+   DELETE FROM users_user
+   WHERE id=101;
       ```
 
 ### 조건에 따른 쿼리문
