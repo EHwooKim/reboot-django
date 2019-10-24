@@ -265,17 +265,6 @@ class Patient(models.Model):
    d2.patients.remove(p5)
    ```
 
-   
-
-
-
-
-
-
-
-
-
-
 
 
 
